@@ -1,12 +1,11 @@
 "use client";
 
 import Button from "@/components/ui/Button";
-import { error } from "console";
 import { signIn } from "next-auth/react";
 import { FC, useState } from "react";
 import toast from "react-hot-toast";
 
-interface pageProps {}
+interface pageProps { [key: string]: unknown }
 
 const page: FC<pageProps> = ({}) => {
   const [isLoading, setIsLoading] = useState<boolean>(false);
@@ -15,7 +14,7 @@ const page: FC<pageProps> = ({}) => {
     setIsLoading(true);
     try {
         await signIn('google')
-    } catch (e) {
+    } catch (error) {
         toast.error("Something went wrong with your Login")
     } finally{
         setIsLoading(false)
