@@ -4,7 +4,7 @@ import './globals.css'
 // Done after the video and optional: add page metadata
 export const metadata = {
   title: 'Mulaakaat | Home',
-  description: 'Welcome to the FriendZone',
+  description: 'Welcome to Mulaakaat',
 }
 
 export default function RootLayout({
